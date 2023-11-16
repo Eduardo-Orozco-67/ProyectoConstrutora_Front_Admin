@@ -20,31 +20,31 @@ El repositorio contiene dos carpetas principales:
 Instrucciones paso a paso para configurar el proyecto en tu entorno local.
 
 
-# clona el repositorio
+### clona el repositorio
 ```bash
-git clone [URL del repositorio]
+git clone https://github.com/Eduardo-Orozco-67/ProyectoConstrutora_Fronted_vue.git
 ```
 
-# navega a la carpeta del cliente
+### navega a la carpeta del cliente
 ```bash
 cd constructora/cliente
 ```
-# instala las dependencias
+### instala las dependencias
 ```bash
 npm install
 ```
-# inicia el servidor de desarrollo7
+### inicia el servidor de desarrollo7
 ```bash
 npm run serve
 ```
 
-# repite los pasos para la carpeta del administrador
+### repite los pasos para la carpeta del administrador
 ```bash
 cd ../administrador
 npm install
 npm run serve
 ```
-# Instalar socket.io-cliente y axios en ambos proyectos
+### Instalar socket.io-cliente y axios en ambos proyectos
 
 ```bash
 npm install axios
