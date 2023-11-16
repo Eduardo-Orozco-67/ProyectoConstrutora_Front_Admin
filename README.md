@@ -33,7 +33,7 @@ cd constructora/cliente
 ```bash
 npm install
 ```
-### inicia el servidor de desarrollo7
+### inicia el servidor de desarrollo
 ```bash
 npm run serve
 ```
