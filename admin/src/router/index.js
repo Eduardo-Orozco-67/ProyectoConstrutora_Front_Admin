@@ -152,6 +152,16 @@ const router = createRouter({
                     component: () => import('@/views/uikit/Chart.vue')
                 },
                 {
+                    path: '/uikit/porcentaje',
+                    name: 'porcentaje',
+                    component: () => import('@/views/uikit/porcentaje_proyecto.vue')
+                },
+                {
+                    path: '/uikit/proyectosSupervisor',
+                    name: 'proyectossupervisor',
+                    component: () => import('@/views/uikit/proyectos_supervisor.vue')
+                },
+                {
                     path: '/blocks',
                     name: 'blocks',
                     component: () => import('@/views/utilities/Blocks.vue')

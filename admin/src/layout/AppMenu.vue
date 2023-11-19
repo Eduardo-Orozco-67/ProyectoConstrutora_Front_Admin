@@ -73,6 +73,12 @@ const model = ref([
                         to: '/uikit/ProyectoAPI'
                     },
                     {
+                        label: 'Crear proyectos',
+                        icon: 'pi pi-fw pi-file-edit',
+                        selected: false,
+                        to: '/uikit/overlay'
+                    },
+                    {
                         label: 'Agregar supervisor a proyectos',
                         icon: 'pi pi-fw pi-book',
                         selected: false,
@@ -91,17 +97,24 @@ const model = ref([
                         to: '/uikit/ColaboradorAPI'
                     },
                     {
-                        label: 'Crear proyectos',
-                        icon: 'pi pi-fw pi-file-edit',
+                        label: 'Proyectos de un Supervisor',
+                        icon: 'pi pi-fw pi-book',
                         selected: false,
-                        to: '/uikit/overlay'
+                        to: '/uikit/proyectosSupervisor'
                     },
                     {
                         label: 'Crear supervisores y colaboradores',
                         icon: 'pi pi-fw pi-user-plus',
                         selected: false,
                         to: '/uikit/tree'
+                    },
+                    {
+                        label: 'Porcentaje y Estado proyecto',
+                        icon: 'pi pi-fw pi-th-large',
+                        selected: false,
+                        to: '/uikit/porcentaje'
                     }
+
                 ]
             },
             {
