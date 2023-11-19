@@ -31,7 +31,7 @@
           <div class="card p-fluid">
               <div>
                 <img 
-                  src="dist/demo/images/galleria/Empresas.jpg" 
+                  src="../../assets/Empresas.jpg" 
                   alt="Imagen de empresas"
                   style="max-width: 100%; height: auto;"
                    

@@ -45,7 +45,7 @@
       <div class="col-6 md:6">
         <div class="card p-fluid">
           <img
-            src="dist/demo/images/galleria/servicio.jpeg"
+            src="../../assets/servicio.jpeg"
             alt="Logo representativo"
             style="max-width: 100%; height: auto;"
           />

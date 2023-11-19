@@ -152,11 +152,6 @@ const router = createRouter({
                     component: () => import('@/views/uikit/Chart.vue')
                 },
                 {
-                    path: '/uikit/misc',
-                    name: 'misc',
-                    component: () => import('@/views/uikit/Misc.vue')
-                },
-                {
                     path: '/blocks',
                     name: 'blocks',
                     component: () => import('@/views/utilities/Blocks.vue')
