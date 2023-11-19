@@ -1,29 +1,57 @@
-This template should help get you started developing with Vue 3 in Vite.
+# Constructora
 
-## Customize configuration
+Bienvenido al repositorio del proyecto "Constructora", una solución moderna y eficiente para gestionar proyectos de construcción. Este proyecto está dividido en dos partes principales: una interfaz para clientes y un panel de administración para gestores de la constructora.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Estructura del Proyecto
 
-## Project Setup
+El repositorio contiene dos carpetas principales:
 
-```sh
+1. **Cliente**: La interfaz para los clientes, donde pueden agregar su empresa, crear una solicitud de proyecto y revisar los estatus del mismo, a su vez consultar un chat de ayuda
+2. **Administrador**: Un panel de control para los administradores de la constructora, permitiendo la gestión de proyectos y clientes
+
+## Tecnologías Utilizadas
+
+- **Vue.js**: Un framework progresivo para construir interfaces de usuario.
+- **Axios**: Una biblioteca cliente HTTP basada en promesas para realizar solicitudes HTTP.
+- **Socket.io-client**: Permite la comunicación en tiempo real entre el cliente y el servidor.
+
+## Instalación
+
+Instrucciones paso a paso para configurar el proyecto en tu entorno local.
+
+
+### clona el repositorio
+```bash
+git clone https://github.com/Eduardo-Orozco-67/ProyectoConstrutora_Fronted_vue.git
+```
+
+### navega a la carpeta del cliente
+```bash
+cd constructora/cliente
+```
+### instala las dependencias
+```bash
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+### inicia el servidor de desarrollo
+```bash
+npm run serve
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
+### repite los pasos para la carpeta del administrador
+```bash
+cd ../administrador
+npm install
+npm run serve
 ```
+### Instalar socket.io-cliente y axios en ambos proyectos
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```bash
+npm install axios
+npm install sockect.io-cliente
 ```
+## Browser Support
+
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+
+
