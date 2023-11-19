@@ -117,7 +117,7 @@ methods: {
     };
 
     // Enviar los datos en el cuerpo de la solicitud como JSON
-    axios.post('http://localhost:8000/token', {
+    axios.post('https://api-constructora.onrender.com/token', {
       username: credentials.username,
       password: credentials.password,
     }, {
@@ -145,7 +145,7 @@ methods: {
     // Verificar que authToken no sea null antes de hacer la solicitud
     if (this.authToken) {
       // Modificar la URL para incluir el token JWT como parámetro de consulta
-      axios.get(`http://localhost:8000/empresa/ver-todas?jsonwebtoken=${this.authToken}`)
+      axios.get(`https://api-constructora.onrender.com/empresa/ver-todas?jsonwebtoken=${this.authToken}`)
         .then(response => {
           this.apiData = response.data;
         })
@@ -158,7 +158,7 @@ methods: {
     // Nueva función para cargar datos de una ruta protegida
     cargarDatosProtegidos() {
     // Modificar la URL para incluir el token JWT como parámetro de consulta
-    axios.get(`http://localhost:8000/protected-route?jsonwebtoken=${this.authToken}`)
+    axios.get(`https://api-constructora.onrender.com/protected-route?jsonwebtoken=${this.authToken}`)
       .then(response => {
         console.log('Datos de la ruta protegida:', response.data);
         // Hacer algo con los datos obtenidos de la ruta protegida
@@ -174,7 +174,7 @@ methods: {
     },
     eliminarEmpresa() {
     if (this.confirmacionEmpresa && this.authToken) {
-      axios.delete(`http://localhost:8000/empresa/delete/${this.confirmacionEmpresa.nombre}?jsonwebtoken=${this.authToken}`)
+      axios.delete(`https://api-constructora.onrender.com/empresa/delete/${this.confirmacionEmpresa.nombre}?jsonwebtoken=${this.authToken}`)
         .then(response => {
           if (response.status === 200) {
             this.cargarEmpresas();
@@ -200,7 +200,7 @@ methods: {
 
     buscarEmpresaPorNombre() {
     if (this.nombreEmpresa && this.authToken) {
-      axios.get(`http://localhost:8000/empresa/ver1/${this.nombreEmpresa}?jsonwebtoken=${this.authToken}`)
+      axios.get(`https://api-constructora.onrender.com/empresa/ver1/${this.nombreEmpresa}?jsonwebtoken=${this.authToken}`)
         .then(response => {
           this.apiData = [response.data];
           this.mostrarNotificacion("Empresa encontrada!", "Empresa encontrada con éxito.", "success");
@@ -230,7 +230,7 @@ methods: {
 
     guardarEdicion() {
     if (this.empresaEdit && this.authToken) {
-      axios.put(`http://localhost:8000/empresa/update/${this.empresaEdit.nombre}?jsonwebtoken=${this.authToken}`, this.empresaEdit)
+      axios.put(`https://api-constructora.onrender.com/empresa/update/${this.empresaEdit.nombre}?jsonwebtoken=${this.authToken}`, this.empresaEdit)
         .then(response => {
           if (response.status === 200) {
             this.cargarEmpresas();

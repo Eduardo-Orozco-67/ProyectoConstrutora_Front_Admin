@@ -46,7 +46,20 @@ const model = ref([
                         icon: 'pi pi-fw pi-file-edit',
                         to: '/uikit/InvalidState',
                         selected: false // Agregar una propiedad para rastrear la selección
-                    }
+                    },
+                    {
+                        label: 'Agregar detalles de solicitudes',
+                        icon: 'pi pi-fw pi-book',
+                        selected: false,
+                        to: '/uikit/DetalleSolicitud'
+                    },
+                    {
+                        //Se agrego detalle de servicio
+                        label: 'Agregar servicio a solicitudes',
+                        icon: 'pi pi-fw pi-truck',
+                        selected: false,
+                        to: '/uikit/DetalleServicio'
+                    },
                 ]
             },
             { 
@@ -58,6 +71,12 @@ const model = ref([
                         icon: 'pi pi-fw pi-th-large',
                         selected: false,
                         to: '/uikit/ProyectoAPI'
+                    },
+                    {
+                        label: 'Agregar supervisor a proyectos',
+                        icon: 'pi pi-fw pi-book',
+                        selected: false,
+                        to: '/uikit/DetalleProyecto'
                     },
                     {
                         label: 'Ver supervisores',
@@ -107,11 +126,6 @@ const model = ref([
     },
 ]);
 
-// Función para cambiar el color del ícono cuando se selecciona
-const toggleIconColor = (item) => {
-    item.selected = !item.selected;
-
-};
 
 </script>
 

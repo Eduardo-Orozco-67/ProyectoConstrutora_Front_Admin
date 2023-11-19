@@ -105,7 +105,7 @@
           password: 'secretaacces123',
         };
   
-        axios.post('http://localhost:8000/token', {
+        axios.post('https://api-constructora.onrender.com/token', {
           username: credentials.username,
           password: credentials.password,
         }, {
@@ -130,7 +130,7 @@
         // Verificar que authToken no sea null antes de hacer la solicitud
         if (this.authToken) {
           // Modificar la URL para incluir el token JWT como parámetro de consulta
-          axios.get(`http://localhost:8000/supervisor/ver-todos/?jsonwebtoken=${this.authToken}`)
+          axios.get(`https://api-constructora.onrender.com/supervisor/ver-todos/?jsonwebtoken=${this.authToken}`)
             .then(response => {
               this.supervisores = response.data;
             })
@@ -147,7 +147,7 @@
   
       eliminarSupervisor() {
         if (this.confirmacionSupervisor) {
-          const url = `http://localhost:8000/supervisor/delete/${this.confirmacionSupervisor.telefono}/${this.confirmacionSupervisor.correo}?jsonwebtoken=${this.authToken}`;
+          const url = `https://api-constructora.onrender.com/supervisor/delete/${this.confirmacionSupervisor.telefono}/${this.confirmacionSupervisor.correo}?jsonwebtoken=${this.authToken}`;
   
           axios.delete(url)
             .then(response => {
@@ -167,7 +167,7 @@
     // Método para buscar supervisor por teléfono y correo
     buscarSupervisorPorTelefonoYCorreo() {
       if (this.telefono_supervisor || this.correo_supervisor) {
-        const url = `http://localhost:8000/supervisor/ver1/${this.telefono_supervisor}/${this.correo_supervisor}?jsonwebtoken=${this.authToken}`;
+        const url = `https://api-constructora.onrender.com/supervisor/ver1/${this.telefono_supervisor}/${this.correo_supervisor}?jsonwebtoken=${this.authToken}`;
 
       axios.get(url)
       .then(response => {
@@ -190,7 +190,7 @@
     },
 
     guardarEdicionSupervisor() {
-    const url = `http://localhost:8000/supervisor/update/${this.supervisorEdit.telefono}/${this.supervisorEdit.correo}?jsonwebtoken=${this.authToken}`;
+    const url = `https://api-constructora.onrender.com/supervisor/update/${this.supervisorEdit.telefono}/${this.supervisorEdit.correo}?jsonwebtoken=${this.authToken}`;
 
     axios.put(url, this.supervisorEdit)
     .then(response => {
@@ -259,6 +259,10 @@
     VUEX
     Vue Router
     API REST con FAST API
+    ORM (Object-Relational Mapping)
+    JWT(JSON Web Tokens)
+    HTML/CSS
+    JavaScript
   */ 
 
   },

@@ -124,7 +124,7 @@ export default {
         password: 'secretaacces123',
       };
 
-      axios.post('http://localhost:8000/token', {
+      axios.post('https://api-constructora.onrender.com/token', {
         username: credentials.username,
         password: credentials.password,
       }, {
@@ -149,7 +149,7 @@ export default {
      // Verificar que authToken no sea null antes de hacer la solicitud
     if (this.authToken) {
     // Modificar la URL para incluir el token JWT como parámetro de consulta
-    axios.get(`http://localhost:8000/proyecto/ver-todos?jsonwebtoken=${this.authToken}`)
+    axios.get(`https://api-constructora.onrender.com/proyecto/ver-todos?jsonwebtoken=${this.authToken}`)
       .then(response => {
         this.proyectos = response.data;
       })
@@ -166,7 +166,7 @@ export default {
 
     eliminarProyecto() {
     if (this.confirmacionProyecto) {
-    const url = `http://localhost:8000/proyecto/delete/${this.confirmacionProyecto.folio_solicitud}?jsonwebtoken=${this.authToken}`;
+    const url = `https://api-constructora.onrender.com/proyecto/delete/${this.confirmacionProyecto.folio_solicitud}?jsonwebtoken=${this.authToken}`;
 
     axios.delete(url)
       .then(response => {
@@ -194,7 +194,7 @@ export default {
 
     buscarProyectoPorFolio() {
       if (this.folio_solicitud && this.authToken) {
-        axios.get(`http://localhost:8000/proyecto/ver1/${this.folio_solicitud}?jsonwebtoken=${this.authToken}`)
+        axios.get(`https://api-constructora.onrender.com/proyecto/ver1/${this.folio_solicitud}?jsonwebtoken=${this.authToken}`)
         .then(response => {
           this.proyectos = [response.data];  // Asignar a proyectos en lugar de apiData
           this.mostrarNotificacion("Proyecto encontrado!", "Proyecto encontrada con éxito.", "success");
@@ -230,7 +230,7 @@ export default {
 
     guardarEdicion() {
       if (this.proyectoEdit) {
-        axios.put(`http://localhost:8000/proyecto/update/${this.proyectoEdit.id_proyecto}`, this.proyectoEdit)
+        axios.put(`https://api-constructora.onrender.com/proyecto/update/${this.proyectoEdit.id_proyecto}`, this.proyectoEdit)
         .then(response => {
           if (response.status === 200) {
             this.cargarProyectos();

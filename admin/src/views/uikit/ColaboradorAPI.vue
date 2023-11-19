@@ -116,7 +116,7 @@
           password: 'secretaacces123',
         };
   
-        axios.post('http://localhost:8000/token', {
+        axios.post('https://api-constructora.onrender.com/token', {
           username: credentials.username,
           password: credentials.password,
         }, {
@@ -139,7 +139,7 @@
   
       cargarColaboradores(){
         if (this.authToken) {
-          axios.get(`http://localhost:8000/colaborador/ver-todos/?jsonwebtoken=${this.authToken}`)
+          axios.get(`https://api-constructora.onrender.com/colaborador/ver-todos/?jsonwebtoken=${this.authToken}`)
             .then(response => {
               this.colaboradores = response.data;
             })
@@ -156,7 +156,7 @@
   
       eliminarColaborador() {
         if (this.confirmacionColaborador) {
-          const url = `http://localhost:8000/colaborador/delete/${this.confirmacionColaborador.telefono}/${this.confirmacionColaborador.correo}?jsonwebtoken=${this.authToken}`;
+          const url = `https://api-constructora.onrender.com/colaborador/delete/${this.confirmacionColaborador.telefono}/${this.confirmacionColaborador.correo}?jsonwebtoken=${this.authToken}`;
 
             axios.delete(url)
                 .then(response => {
@@ -180,7 +180,7 @@ editarColaborador(colaborador) {
 },
 
 guardarEdicionColaborador() {
-  const url = `http://localhost:8000/colaborador/update/${this.colaboradorEdit.telefono}/${this.colaboradorEdit.correo}?jsonwebtoken=${this.authToken}`;
+  const url = `https://api-constructora.onrender.com/colaborador/update/${this.colaboradorEdit.telefono}/${this.colaboradorEdit.correo}?jsonwebtoken=${this.authToken}`;
 
   axios.put(url, this.colaboradorEdit)
     .then(response => {
@@ -216,7 +216,7 @@ cancelarEliminacionColaborador() {
 // Métodos para buscar colaboradores por teléfono y correo
 buscarColaboradorPorTelefonoYCorreo() {
       if (this.telefono_colaborador || this.correo_colaborador) {
-        const url = `http://localhost:8000/colaborador/ver1/${this.telefono_colaborador}/${this.correo_colaborador}?jsonwebtoken=${this.authToken}`;
+        const url = `https://api-constructora.onrender.com/colaborador/ver1/${this.telefono_colaborador}/${this.correo_colaborador}?jsonwebtoken=${this.authToken}`;
 
       axios.get(url)
       .then(response => {

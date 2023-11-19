@@ -131,7 +131,7 @@ export default {
     };
 
     // Enviar los datos en el cuerpo de la solicitud como JSON
-    axios.post('http://localhost:8000/token', {
+    axios.post('https://api-constructora.onrender.com/token', {
       username: credentials.username,
       password: credentials.password,
     }, {
@@ -155,7 +155,7 @@ export default {
     },
 
     cargarSolicitudes() {
-      axios.get(`http://localhost:8000/solicitud_proyecto/ver-todas?jsonwebtoken=${this.authToken}`)
+      axios.get(`https://api-constructora.onrender.com/solicitud_proyecto/ver-todas?jsonwebtoken=${this.authToken}`)
       .then(response => {
         // Filtrar las solicitudes por estado "Aceptado" o "Rechazado"
         this.solicitudes = response.data.filter(solicitud => {
@@ -174,7 +174,7 @@ export default {
     },
     eliminarSolicitud() {
       if (this.confirmacionSolicitud) {
-      const url = `http://localhost:8000/solicitud_proyecto/delete/${this.confirmacionSolicitud.folio_solicitud}?jsonwebtoken=${this.authToken}`;
+      const url = `https://api-constructora.onrender.com/solicitud_proyecto/delete/${this.confirmacionSolicitud.folio_solicitud}?jsonwebtoken=${this.authToken}`;
 
       axios.delete(url)
       .then(response => {
@@ -202,7 +202,7 @@ export default {
 
     buscarSolicitudPorFolio() {
   if (this.folioSolicitud) {
-    const url = `http://localhost:8000/solicitud_proyecto/ver1/${this.folioSolicitud}?jsonwebtoken=${this.authToken}`;
+    const url = `https://api-constructora.onrender.com/solicitud_proyecto/ver1/${this.folioSolicitud}?jsonwebtoken=${this.authToken}`;
     axios.get(url)
       .then(response => {
         this.solicitudes = [response.data];
@@ -255,7 +255,7 @@ export default {
         return;
       }
 
-        axios.put(`http://localhost:8000/solicitud_proyecto/update/${this.solicitudEdit.folio_solicitud}`, this.solicitudEdit)
+        axios.put(`https://api-constructora.onrender.com/solicitud_proyecto/update/${this.solicitudEdit.folio_solicitud}`, this.solicitudEdit)
           .then(response => {
             if (response.status === 200) {
               this.cargarSolicitudes();

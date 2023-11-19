@@ -41,7 +41,7 @@ const router = createRouter({
                 {
                     path: '/uikit/invalidstate',
                     name: 'invalidstate',
-                    component: () => import('@/views/uikit/InvalidState.vue')
+                    component: () => import('@/views/uikit/solicitud_proyecto_crete.vue')
                 },
                 {
                     path: '/uikit/table',
@@ -61,12 +61,12 @@ const router = createRouter({
                 {
                     path: '/uikit/list',
                     name: 'list',
-                    component: () => import('@/views/uikit/List.vue')
+                    component: () => import('@/views/uikit/registro_empresa.vue')
                 },
                 {
                     path: '/uikit/tree',
                     name: 'tree',
-                    component: () => import('@/views/uikit/Tree.vue')
+                    component: () => import('@/views/uikit/registro_super_colab.vue')
                 },
                 {
                     path: '/uikit/panel',
@@ -77,7 +77,7 @@ const router = createRouter({
                 {
                     path: '/uikit/overlay',
                     name: 'overlay',
-                    component: () => import('@/views/uikit/Overlay.vue')
+                    component: () => import('@/views/uikit/create_proyecto.vue')
                 },
                 {
                     path: '/uikit/media',
@@ -127,9 +127,24 @@ const router = createRouter({
                     component: () => import('@/views/uikit/ServiciosAPI.vue')
                 },
                 {
+                    path: '/uikit/DetalleProyecto',
+                    name: 'DetalleProyecto',
+                    component: () => import('@/views/uikit/DetalleProyecto.vue')
+                },
+                {
+                    path: '/uikit/DetalleSolicitud',
+                    name: 'DetalleSolicitud',
+                    component: () => import('@/views/uikit/DetalleSolicitud.vue')
+                },
+                {
+                    path: '/uikit/DetalleServicio',
+                    name: 'DetalleServicio',
+                    component: () => import('@/views/uikit/DetalleServicio.vue')
+                },
+                {
                     path: '/uikit/file',
                     name: 'file',
-                    component: () => import('@/views/uikit/File.vue')
+                    component: () => import('@/views/uikit/registro_servicios.vue')
                 },
                 {
                     path: '/uikit/charts',

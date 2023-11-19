@@ -105,7 +105,7 @@ export default {
     };
 
     // Enviar los datos en el cuerpo de la solicitud como JSON
-    axios.post('http://localhost:8000/token', {
+    axios.post('https://api-constructora.onrender.com/token', {
       username: credentials.username,
       password: credentials.password,
     }, {
@@ -129,7 +129,7 @@ export default {
     },
 
     cargarServicios() {
-      axios.get(`http://localhost:8000/servicio/ver-todos?jsonwebtoken=${this.authToken}`)
+      axios.get(`https://api-constructora.onrender.com/servicio/ver-todos?jsonwebtoken=${this.authToken}`)
       .then(response => {
         this.servicios = response.data;
       })
@@ -145,7 +145,7 @@ export default {
 
     eliminarServicio() {
     if (this.confirmacionServicio) {
-    const url = `http://localhost:8000/servicio/delete/${this.confirmacionServicio.servicio}?jsonwebtoken=${this.authToken}`;
+    const url = `https://api-constructora.onrender.com/servicio/delete/${this.confirmacionServicio.servicio}?jsonwebtoken=${this.authToken}`;
 
     axios.delete(url)
       .then(response => {
@@ -173,7 +173,7 @@ export default {
 
     buscarServicioPorNombre() {
       if (this.nombreServicio) {
-        const url = `http://localhost:8000/servicio/ver1/${this.nombreServicio}?jsonwebtoken=${this.authToken}`;
+        const url = `https://api-constructora.onrender.com/servicio/ver1/${this.nombreServicio}?jsonwebtoken=${this.authToken}`;
 
       axios.get(url)
       .then(response => {
@@ -204,7 +204,7 @@ export default {
     guardarEdicion() {
       if (this.servicioEdit) {
       const { servicio, descripcion } = this.servicioEdit;
-      const url = `http://localhost:8000/servicio/update/${servicio}?nueva_descripcion=${descripcion}&jsonwebtoken=${this.authToken}`;
+      const url = `https://api-constructora.onrender.com/servicio/update/${servicio}?nueva_descripcion=${descripcion}&jsonwebtoken=${this.authToken}`;
 
       axios.patch(url)
       .then(response => {

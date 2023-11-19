@@ -64,26 +64,27 @@ const isOutsideClicked = (event) => {
 </script>
 
 <template>
-    <div class="layout-topbar">
-        <router-link to="/" class="layout-topbar-logo">
+    <div class="layout-topbar" >
+        <router-link to="/" class="layout-topbar-logo" >
             <img :src="logoUrl" alt="logo" />
-            <span>RUBA</span>
+            <span class="texto-blanco">RUBA</span>
+            
         </router-link>
 
-        <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle()"  style="color: black;">
+        <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle()"  style="color: white;">
             <i class="pi pi-bars"></i>
         </button>
 
-        <button class="p-link layout-topbar-menu-button layout-topbar-button" @click="onTopBarMenuButton()" style="color: black;">
+        <button class="p-link layout-topbar-menu-button layout-topbar-button" @click="onTopBarMenuButton()" style="color: white;">
             <i class="pi pi-ellipsis-v"></i>
         </button>
 
         <div class="layout-topbar-menu" :class="topbarMenuClasses">
-            <button @click="onTopBarMenuButton()" class="p-link layout-topbar-button" style="color: black;">
+            <button @click="onTopBarMenuButton()" class="p-link layout-topbar-button" style="color: white;">
                 <i class="pi pi-inbox"></i>
                 <span>Profile</span>
             </button>
-            <button @click="onSettingsClick()" class="p-link layout-topbar-button" style="color: black;">
+            <button @click="onSettingsClick()" class="p-link layout-topbar-button" style="color: white;">
                 <i class="pi pi-cog"></i>
                 <span>Settings</span>
             </button>
@@ -95,4 +96,8 @@ const isOutsideClicked = (event) => {
 .layout-topbar {
     background-color: #303960;
 }
+
+.texto-blanco {
+    color: white;
+  }
 </style>
